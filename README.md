@@ -27,7 +27,7 @@ The POS tags follow the Penn Treebank (PTB) tagging scheme, described [here](htt
 - We evaluate the performance of our grammar checker by calculating its precision and recall on the data available to us. To do that, we compared the prediction of our system on a given sentence and its corresponding label in the dataset. 
 
 # Report and Results
-Further details and results can be found [here]([https://github.com/Leen-Alzebdeh/NLP-Data-Cleaning-Task](https://github.com/Leen-Alzebdeh/NLP-Grammar-Checker/blob/main/REPORT.md)
+Further details and results can be found [here](https://github.com/Leen-Alzebdeh/NLP-Grammar-Checker/blob/main/REPORT.md)
 
 # Contributors
 
