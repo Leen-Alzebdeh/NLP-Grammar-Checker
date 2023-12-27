@@ -55,6 +55,8 @@ We run this project using standard Python libraries csv, sys, nltk.
 
 `pip install --user -U nltk`
 
+3. Ensure you have input data in the format outlined above and in a file 'data/train.tsv' 
+
 
 Example usage: use the following command in the current directory.
 
