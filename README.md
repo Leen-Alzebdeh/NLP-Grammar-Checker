@@ -1,7 +1,7 @@
 # NLP-Grammar-Checker
 We write a grammar and a parser to parse the POS tag sequence.
 
-- Input data: Input: sentences with POS tags
+- Input data: sentences with POS tags
   The input is a tsv (tab-separated values) file like the sample:
   |id|label|sentence|pos|
   | -|-----|--------|---|
