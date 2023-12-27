@@ -4,6 +4,7 @@ We write a grammar and a parser to parse the POS tag sequence.
 - Input data: Input: sentences with POS tags
   The input is a tsv (tab-separated values) file like the sample:
   |id|label|sentence|pos|
+  | -|-----|--------|---|
   |73|0|Many thanks in advance for your cooperation .| JJ NNS IN NN IN PRP$ NN .| 74| 1| At that moment we saw the bus to come .|IN DT NN PRP VBD DT NN TO VB .|
 
 # Report 
