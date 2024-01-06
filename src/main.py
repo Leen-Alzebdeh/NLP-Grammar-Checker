@@ -21,6 +21,14 @@ def main():
 
 
 def const_parse(input_path, gram_path, output_path):
+    '''
+    parse the constituents, determine if grammar for each doc is correct or not, and calculate precision, recall and confusion mtx values
+    Input:
+        input_path (str): path to input train tsv file
+        gram_path (str): path to grammar you built
+        output_path (str): path where you want to output predictions
+    return None
+    '''
     TP, TN, FP, FN = 0, 0, 0, 0
     cfg = nltk.data.load(gram_path)
     parser = nltk.ChartParser(cfg)  # not sure about this
@@ -60,9 +68,22 @@ def const_parse(input_path, gram_path, output_path):
     print("Values of TP, TN, FP, FN: {}, {}, {}, {}".format(TP, TN, FP, FN))
 
 
-def evaluate(label, prediction, sentence_id, pos, TP, TN, FP, FN):
+def evaluate(label, prediction, TP, TN, FP, FN):
     '''
-    return values: TP, TN, FP, FN
+    calculate confusion mtx values given a doc and current confusion mtx
+    input
+        label: actual label for doc (0 if correct, 1 otherwise)
+        prediction (int): predicted label
+        TP (int): true positives
+        TN (int): true negatives
+        FP (int): false positive
+        FN (int): false negative
+    return 
+        TP (int): true positives
+        TN (int): true negatives
+        FP (int): false positive
+        FN (int): false negative
+
     '''
     if label == prediction:
         if int(label):
@@ -73,8 +94,6 @@ def evaluate(label, prediction, sentence_id, pos, TP, TN, FP, FN):
         if int(label):
             return TP, TN, FP, FN+1
         else:
-            print(sentence_id, prediction)
-            print(pos)
             return TP, TN, FP+1, FN
 
 
